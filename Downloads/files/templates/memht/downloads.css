@@ -1,0 +1,21 @@
+/* Main */
+.tpl_downloads {
+	margin-bottom:10px;
+	border:5px solid #EEE;
+}
+.tpl_downloads .ring {
+	padding:5px;
+	border:1px solid #DDD;
+}
+.tpl_downloads .sectitle {
+	font-size:16px;
+	font-weight:bold;
+}
+.tpl_downloads .category .title {
+	padding-left:20px;
+	margin:4px 0;
+}
+.tpl_downloads .category .body {
+	padding-left:40px;
+	margin:4px 0;
+}

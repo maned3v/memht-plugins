@@ -1,0 +1,23 @@
+/* Links */
+.tpl_links_title a {
+    font-size:120%;   
+}
+.tpl_links_info {
+	font-size:10px;
+	color:#85A0B6;
+}
+.tpl_links {
+    margin-bottom:15px;
+	border-bottom:1px dotted #D4E3EF;
+}
+.tpl_links_content {
+    padding: 5px 5px 5px 0;
+}
+.tpl_links_image {
+    border:5px solid #D6E3EF;
+}
+.tpl_links_box {
+    border-bottom:1px dotted #D4E3EF;
+    padding: 2px;
+    margin: 0 0 5px 0;
+}

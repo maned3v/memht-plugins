@@ -1,0 +1,12 @@
+.tpl_gallery_list {
+	float:left;
+	position:relative;
+	color:#FFF;
+}
+.tpl_gallery_element {
+	position:absolute;
+	background:url(../../images/core/transpbg.png) repeat;
+	padding:10px;
+	bottom:15px;
+	left:5px;
+}

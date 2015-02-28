@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="<?php echo $config_sys['site_url']._DS; ?>templates<?php echo _DS.$config_sys['template']._DS; ?>forums.css" type="text/css" />
