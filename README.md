@@ -9,10 +9,10 @@ You can create and manage your website with MemHT in few and easy steps, it's cu
 #### GitHub repository links
 |Repository|Link|
 |----------|----|
-|MemHT Core|https://github.com/memht/memht|
-|MemHT Extensions|https://github.com/memht/memht-extensions|
-|**MemHT Plugins**|https://github.com/memht/memht-plugins|
-|MemHT Templates|https://github.com/memht/memht-templates|
+|MemHT Core|https://github.com/maned3v/memht|
+|MemHT Extensions|https://github.com/maned3v/memht-extensions|
+|**MemHT Plugins**|https://github.com/maned3v/memht-plugins|
+|MemHT Templates|https://github.com/maned3v/memht-templates|
 
 #### MemHT links
 <table>
