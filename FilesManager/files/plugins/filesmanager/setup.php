@@ -47,7 +47,7 @@ class Setup {
 					  `file_ext` varchar(4) NOT NULL,
 					  `size` int(10) NOT NULL,
 					  `author` int(10) NOT NULL,
-					  `uploaded` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+					  `uploaded` datetime NOT NULL,
 					  `ip` varbinary(32) NOT NULL,
 					  `roles` text NOT NULL,
 					  `hits` int(10) NOT NULL,

@@ -476,7 +476,7 @@ class galleryModel extends Views {
 				//Start buffering content
 				Utils::StartBuffering();
 				
-				Error::Trigger("USERERROR",_t("NOT_AUTH_TO_ACCESS_X",MB::strtolower(_t("IMAGE"))));
+				MemErr::Trigger("USERERROR",_t("NOT_AUTH_TO_ACCESS_X",MB::strtolower(_t("IMAGE"))));
 			}
 		} else {
 			//Initialize and show site header
@@ -484,7 +484,7 @@ class galleryModel extends Views {
 			//Start buffering content
 			Utils::StartBuffering();
 			
-			Error::Trigger("INFO",_t("X_NOT_FOUND_OR_INACTIVE",_t("IMAGE")));
+			MemErr::Trigger("INFO",_t("X_NOT_FOUND_OR_INACTIVE",_t("IMAGE")));
 		}
 
 		//Assign captured content to the template engine and clean buffer
@@ -558,7 +558,7 @@ class galleryModel extends Views {
 			//Start buffering content
 			Utils::StartBuffering();
 
-			Error::Trigger("USERERROR",implode("<br />",$errors));
+			MemErr::Trigger("USERERROR",implode("<br />",$errors));
 
 			//Assign captured content to the template engine and clean buffer
 			Template::AssignVar("sys_main",array("title"=>_PLUGIN_TITLE,

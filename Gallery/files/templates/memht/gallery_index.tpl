@@ -27,7 +27,7 @@
 {if isset($plugin_index) && !empty($plugin_index)}
 	{if isset($plugin_opt.lightbox) && $plugin_opt.lightbox>0}
 		{literal}
-		<script type="text/javascript" src="libraries/jQuery/plugins/fancybox/jquery.fancybox.pack.js"></script>
+		<script type="text/javascript" src="libraries/jQuery/plugins/fancybox/jquery.fancybox.js"></script>
 		<link rel="stylesheet" href="libraries/jQuery/plugins/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
 		<script type="text/javascript">
 			$(document).ready(function() {

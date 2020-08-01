@@ -451,7 +451,7 @@ class DownloadsModel {
 						<div class="ui-widget-header"><?php echo _t("BROWSE_X",MB::strtolower(_t("CATEGORY"))); ?></div>
 						<div class="body">
 						<?php
-						Error::Trigger("USERERROR",_t("X_NOT_FOUND",_t("CATEGORY")));
+						MemErr::Trigger("USERERROR",_t("X_NOT_FOUND",_t("CATEGORY")));
 						?>
 						</div>
 					</div>
@@ -846,10 +846,10 @@ class DownloadsModel {
 								
 						Utils::Redirect("admin.php?cont="._PLUGIN);
 					} else {
-						Error::Trigger("USERERROR",implode("<br />",$errors));
+						MemErr::Trigger("USERERROR",implode("<br />",$errors));
 					}
 				} else {
-					Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+					MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 				}
 			}
 
@@ -1322,7 +1322,7 @@ class DownloadsModel {
 											<div class="ui-widget-header"><?php echo _t("EDIT"); ?></div>
 											<div class="body">
 												<?php
-													Error::Trigger("USERERROR",implode("<br />",$errors));
+													MemErr::Trigger("USERERROR",implode("<br />",$errors));
 												?>
 											</div>
 										</div>
@@ -1340,7 +1340,7 @@ class DownloadsModel {
 										<div class="ui-widget-header"><?php echo _t("EDIT"); ?></div>
 										<div class="body">
 											<?php
-												Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+												MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 											?>
 										</div>
 									</div>
@@ -1359,7 +1359,7 @@ class DownloadsModel {
 								<div class="ui-widget-header"><?php echo _t("EDIT"); ?></div>
 								<div class="body">
 									<?php
-										Error::Trigger("USERERROR",_t("X_NOT_FOUND",_t("FILE")));
+										MemErr::Trigger("USERERROR",_t("X_NOT_FOUND",_t("FILE")));
 									?>
 								</div>
 							</div>
@@ -1882,10 +1882,10 @@ class DownloadsModel {
 
 									Utils::Redirect("admin.php?cont="._PLUGIN."&op=sections");
 								} else {
-									Error::Trigger("USERERROR",implode("<br />",$errors));
+									MemErr::Trigger("USERERROR",implode("<br />",$errors));
 								}
 							} else {
-								Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+								MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 							}
 
 							?>
@@ -2057,14 +2057,14 @@ class DownloadsModel {
 
 										Utils::Redirect("admin.php?cont="._PLUGIN."&op=sections");
 									} else {
-										Error::Trigger("USERERROR",implode("<br />",$errors));
+										MemErr::Trigger("USERERROR",implode("<br />",$errors));
 									}
 								} else {
-									Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+									MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 								}
 							}
 						} else {
-							Error::Trigger("USERERROR",_t("X_NOT_FOUND",_t("SECTION")));
+							MemErr::Trigger("USERERROR",_t("X_NOT_FOUND",_t("SECTION")));
 						}
 						?>
 
@@ -2508,10 +2508,10 @@ class DownloadsModel {
 
 									Utils::Redirect("admin.php?cont="._PLUGIN."&op=categories");
 								} else {
-									Error::Trigger("USERERROR",implode("<br />",$errors));
+									MemErr::Trigger("USERERROR",implode("<br />",$errors));
 								}
 							} else {
-								Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+								MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 							}
 
 							?>
@@ -2742,14 +2742,14 @@ class DownloadsModel {
 
 										Utils::Redirect("admin.php?cont="._PLUGIN."&op=categories");
 									} else {
-										Error::Trigger("USERERROR",implode("<br />",$errors));
+										MemErr::Trigger("USERERROR",implode("<br />",$errors));
 									}
 								} else {
-									Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+									MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 								}
 							}
 						} else {
-							Error::Trigger("USERERROR",_t("X_NOT_FOUND",_t("CATEGORY")));
+							MemErr::Trigger("USERERROR",_t("X_NOT_FOUND",_t("CATEGORY")));
 						}
 						?>
 

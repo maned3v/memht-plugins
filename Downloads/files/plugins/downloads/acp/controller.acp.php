@@ -54,7 +54,7 @@ class downloadsController extends downloadsModel {
 						<div class="widget ui-widget-content ui-corner-all">
 							<div class="ui-widget-header"><?php echo _t("NOTICE"); ?></div>
 							<div class="body">
-								<?php Error::Trigger("USERERROR",_t("CREATE_FOLDER"),"assets/downloads/files/<strong>".$config_sys['files_path']."</strong>"); ?>
+								<?php MemErr::Trigger("USERERROR",_t("CREATE_FOLDER"),"assets/downloads/files/<strong>".$config_sys['files_path']."</strong>"); ?>
 							</div>
 						</div>
 					</td>

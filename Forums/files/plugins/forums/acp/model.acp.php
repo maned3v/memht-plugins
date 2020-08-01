@@ -450,10 +450,10 @@ class forumsModel {
 
 					Utils::Redirect("admin.php?cont="._PLUGIN."&op=categories");
 				} else {
-					Error::Trigger("USERERROR",implode("<br />",$errors));
+					MemErr::Trigger("USERERROR",implode("<br />",$errors));
 				}
 			} else {
-				Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+				MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 			}
 
 			?>
@@ -609,14 +609,14 @@ class forumsModel {
 
 											Utils::Redirect("admin.php?cont="._PLUGIN."&op=categories");
 										} else {
-											Error::Trigger("USERERROR",implode("<br />",$errors));
+											MemErr::Trigger("USERERROR",implode("<br />",$errors));
 										}
 									} else {
-										Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+										MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 									}
 								}
 							} else {
-								Error::Trigger("USERERROR",_t("X_NOT_FOUND",_t("CATEGORY")));
+								MemErr::Trigger("USERERROR",_t("X_NOT_FOUND",_t("CATEGORY")));
 							}
 							?>
 
@@ -845,10 +845,10 @@ class forumsModel {
 
 					Utils::Redirect("admin.php?cont="._PLUGIN."&op=auth&id=$id");
 				} else {
-					Error::Trigger("USERERROR",implode("<br />",$errors));
+					MemErr::Trigger("USERERROR",implode("<br />",$errors));
 				}
 			} else {
-				Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+				MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 			}
 
 			?>
@@ -1037,14 +1037,14 @@ class forumsModel {
 
 											Utils::Redirect("admin.php?cont="._PLUGIN."&op=forums");
 										} else {
-											Error::Trigger("USERERROR",implode("<br />",$errors));
+											MemErr::Trigger("USERERROR",implode("<br />",$errors));
 										}
 									} else {
-										Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+										MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 									}
 								}
 							} else {
-								Error::Trigger("USERERROR",_t("X_NOT_FOUND",_t("FORUM")));
+								MemErr::Trigger("USERERROR",_t("X_NOT_FOUND",_t("FORUM")));
 							}
 							?>
 
@@ -1177,7 +1177,7 @@ class forumsModel {
 
                                 echo "</table>\n";
                             } else {
-                                Error::Trigger("USERERROR",_t("X_NOT_FOUND",_t("FORUM")));
+                                MemErr::Trigger("USERERROR",_t("X_NOT_FOUND",_t("FORUM")));
                             }
 
                             ?>
@@ -1289,10 +1289,10 @@ class forumsModel {
 
 					Utils::Redirect("admin.php?cont="._PLUGIN."&op=moderators&id=$id");
 				} else {
-					Error::Trigger("USERERROR",implode("<br />",$errors));
+					MemErr::Trigger("USERERROR",implode("<br />",$errors));
 				}
 			} else {
-				Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+				MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 			}
 
 			?>
@@ -1498,7 +1498,7 @@ class forumsModel {
 
 								echo "</table>\n";
 							} else {
-								Error::Trigger("USERERROR",_t("X_NOT_FOUND",_t("FORUM")));
+								MemErr::Trigger("USERERROR",_t("X_NOT_FOUND",_t("FORUM")));
 							}
 
 							?>

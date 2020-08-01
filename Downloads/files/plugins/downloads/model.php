@@ -563,7 +563,7 @@ class downloadsModel extends Views {
 				//Start buffering content
 				Utils::StartBuffering();
 				
-				Error::Trigger("USERERROR",_t("NOT_AUTH_TO_ACCESS_X",MB::strtolower(_t("FILE"))));
+				MemErr::Trigger("USERERROR",_t("NOT_AUTH_TO_ACCESS_X",MB::strtolower(_t("FILE"))));
 			}
 		} else {
 			//Initialize and show site header
@@ -571,7 +571,7 @@ class downloadsModel extends Views {
 			//Start buffering content
 			Utils::StartBuffering();
 
-			Error::Trigger("INFO",_t("X_NOT_FOUND_OR_INACTIVE",_t("FILE")));
+			MemErr::Trigger("INFO",_t("X_NOT_FOUND_OR_INACTIVE",_t("FILE")));
 		}
 
 		//Assign captured content to the template engine and clean buffer
@@ -635,7 +635,7 @@ class downloadsModel extends Views {
 			//Start buffering content
 			Utils::StartBuffering();
 
-			Error::Trigger("USERERROR",$message);
+			MemErr::Trigger("USERERROR",$message);
 
 			//Assign captured content to the template engine and clean buffer
 			Template::AssignVar("sys_main",array("title"=>_PLUGIN_TITLE,
@@ -772,7 +772,7 @@ class downloadsModel extends Views {
 			//Start buffering content
 			Utils::StartBuffering();
 
-			Error::Trigger("USERERROR",implode("<br />",$errors));
+			MemErr::Trigger("USERERROR",implode("<br />",$errors));
 
 			//Assign captured content to the template engine and clean buffer
 			Template::AssignVar("sys_main",array("title"=>_PLUGIN_TITLE,

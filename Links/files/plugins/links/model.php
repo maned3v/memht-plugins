@@ -149,7 +149,7 @@ class linksModel extends Views {
 				Layout::Header();
 				//Start buffering content
 				Utils::StartBuffering();                
-                Error::Trigger("USERERROR",_t("NOT_AUTH_TO_ACCESS_X",MB::strtolower(_t("LINK"))));
+                MemErr::Trigger("USERERROR",_t("NOT_AUTH_TO_ACCESS_X",MB::strtolower(_t("LINK"))));
         		//Assign captured content to the template engine and clean buffer
         		Template::AssignVar("sys_main",array("title"=>_PLUGIN_TITLE,
         											 "showtitle"=>_PLUGIN_SHOWTITLE,

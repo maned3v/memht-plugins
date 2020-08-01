@@ -338,10 +338,10 @@ class linksModel {
 
 									Utils::Redirect("admin.php?cont="._PLUGIN);
 								} else {
-									Error::Trigger("USERERROR",implode("<br />",$errors));
+									MemErr::Trigger("USERERROR",implode("<br />",$errors));
 								}
 							} else {
-								Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+								MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 							}
                        
                        }                                           
@@ -561,15 +561,15 @@ class linksModel {
     
     									Utils::Redirect("admin.php?cont="._PLUGIN);
     								} else {
-    									Error::Trigger("USERERROR",implode("<br />",$errors));
+    									MemErr::Trigger("USERERROR",implode("<br />",$errors));
     								}
     							} else {
-    								Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+    								MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
     							}
                            
                            }
 					} else {
-						Error::Trigger("USERERROR",_t("X_NOT_FOUND",_t("LINK")));
+						MemErr::Trigger("USERERROR",_t("X_NOT_FOUND",_t("LINK")));
 					}                                                                  
                     echo "</div>";
                 echo "</div>";
@@ -811,10 +811,10 @@ class linksModel {
 												
 									Utils::Redirect("admin.php?cont="._PLUGIN."&op=categories");
 								} else {
-									Error::Trigger("USERERROR",implode("<br />",$errors));
+									MemErr::Trigger("USERERROR",implode("<br />",$errors));
 								}
 							} else {
-								Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+								MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 							}
                         }
                     echo "</div>";
@@ -928,14 +928,14 @@ class linksModel {
 											
 											Utils::Redirect("admin.php?cont="._PLUGIN."&op=categories");
 										} else {
-											Error::Trigger("USERERROR",implode("<br />",$errors));
+											MemErr::Trigger("USERERROR",implode("<br />",$errors));
 										}
 									} else {
-										Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+										MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 									}
 								}
 						} else {
-							Error::Trigger("USERERROR",_t("X_NOT_FOUND",_t("CATEGORY")));
+							MemErr::Trigger("USERERROR",_t("X_NOT_FOUND",_t("CATEGORY")));
 						}
                     echo "</div>";
                 echo "</div>";

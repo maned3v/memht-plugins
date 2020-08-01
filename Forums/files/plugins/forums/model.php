@@ -325,7 +325,7 @@ class forumsModel extends Views {
 			$this->plugin_pagination = $plugin_pagination;
 			$this->Show("forums_index");
 		} else {
-			Error::Trigger("USERERROR",_t("NOT_AUTH_TO_PERF_OP"));
+			MemErr::Trigger("USERERROR",_t("NOT_AUTH_TO_PERF_OP"));
 		}
 		
 		//Assign captured content to the template engine and clean buffer
@@ -529,10 +529,10 @@ class forumsModel extends Views {
 					}
 				}
 			} else {
-				Error::Trigger("USERERROR",_t("NOT_AUTH_TO_PERF_OP"));
+				MemErr::Trigger("USERERROR",_t("NOT_AUTH_TO_PERF_OP"));
 			}
 		} else {
-			Error::Trigger("USERERROR",_t("THREAD_DOESNT_EXIST"));
+			MemErr::Trigger("USERERROR",_t("THREAD_DOESNT_EXIST"));
 		}
 	
 		//Assign captured content to the template engine and clean buffer
@@ -642,21 +642,21 @@ class forumsModel extends Views {
 								
 								$Ext->RunMext("Forum_NewThread_Save",array($id,$row,$title,$text));
 								
-								Error::Trigger("INFO",_t("THREAD_CREATED"),_t("REDIRECTING"));
+								MemErr::Trigger("INFO",_t("THREAD_CREATED"),_t("REDIRECTING"));
 								Utils::Redirect(RewriteUrl("index.php?"._NODE."="._PLUGIN."&f=$f&t=$id"));
 							} else {
-								Error::Trigger("USERERROR",implode("<br />",$errors));
+								MemErr::Trigger("USERERROR",implode("<br />",$errors));
 							}
 						} else {
-							Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+							MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 						}
 						break;
 				}
 			} else {
-				Error::Trigger("USERERROR",_t("NOT_AUTH_TO_PERF_OP"));
+				MemErr::Trigger("USERERROR",_t("NOT_AUTH_TO_PERF_OP"));
 			}
 		} else {
-			Error::Trigger("USERERROR",_t("FORUM_DOESNT_EXIST"));
+			MemErr::Trigger("USERERROR",_t("FORUM_DOESNT_EXIST"));
 		}
 		
 		//Assign captured content to the template engine and clean buffer
@@ -786,7 +786,7 @@ class forumsModel extends Views {
 								
 								$Ext->RunMext("Forum_Reply_Save",array($id,$row,$title,$text));
 								
-								Error::Trigger("INFO",_t("POST_ADDED"),_t("REDIRECTING"));
+								MemErr::Trigger("INFO",_t("POST_ADDED"),_t("REDIRECTING"));
 								
 								//Pagination
 								$limit = $Router->GetOption("posts_limit",10);
@@ -794,18 +794,18 @@ class forumsModel extends Views {
 								$pag = ($num>$limit) ? "&page=".ceil($num/$limit) : "" ;
 								Utils::Redirect(RewriteUrl("index.php?"._NODE."="._PLUGIN."&f=".Io::Output($row['forum_name'])."&t=$t".$pag."#post$id"));
 							} else {
-								Error::Trigger("USERERROR",implode("<br />",$errors));
+								MemErr::Trigger("USERERROR",implode("<br />",$errors));
 							}
 						} else {
-							Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+							MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 						}
 						break;
 				}
 			} else {
-				Error::Trigger("USERERROR",_t("NOT_AUTH_TO_PERF_OP"));
+				MemErr::Trigger("USERERROR",_t("NOT_AUTH_TO_PERF_OP"));
 			}
 		} else {
-			Error::Trigger("USERERROR",_t("THREAD_DOESNT_EXIST"));
+			MemErr::Trigger("USERERROR",_t("THREAD_DOESNT_EXIST"));
 		}
 	
 		//Assign captured content to the template engine and clean buffer
@@ -921,7 +921,7 @@ class forumsModel extends Views {
 								
 								$Ext->RunMext("Forum_Modify_Save",array($p,$row,$title,$text));
 								
-								Error::Trigger("INFO",_t("POST_EDITED"),_t("REDIRECTING"));
+								MemErr::Trigger("INFO",_t("POST_EDITED"),_t("REDIRECTING"));
 								$t = Io::Output($row['parent'],"int");
 								if (!$t) $t = $p;
 								
@@ -931,18 +931,18 @@ class forumsModel extends Views {
 								$pag = ($num>$limit) ? "&page=".ceil($num/$limit) : "" ;
 								Utils::Redirect(RewriteUrl("index.php?"._NODE."="._PLUGIN."&f=".Io::Output($row['forum_name'])."&t=$t".$pag."#post$p"));
 							} else {
-								Error::Trigger("USERERROR",implode("<br />",$errors));
+								MemErr::Trigger("USERERROR",implode("<br />",$errors));
 							}
 						} else {
-							Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+							MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 						}
 						break;
 				}
 			} else {
-				Error::Trigger("USERERROR",_t("NOT_AUTH_TO_PERF_OP"));
+				MemErr::Trigger("USERERROR",_t("NOT_AUTH_TO_PERF_OP"));
 			}
 		} else {
-			Error::Trigger("USERERROR",_t("POST_DOESNT_EXIST"));
+			MemErr::Trigger("USERERROR",_t("POST_DOESNT_EXIST"));
 		}
 	
 		//Assign captured content to the template engine and clean buffer
@@ -1041,19 +1041,19 @@ class forumsModel extends Views {
 							$Ext->RunMext("Forum_Delete_Save",array($p,$row));
 							
 							//Redirect
-							Error::Trigger("INFO",_t("POST_DELETED"),_t("REDIRECTING"));
+							MemErr::Trigger("INFO",_t("POST_DELETED"),_t("REDIRECTING"));
 							Utils::Redirect(RewriteUrl("index.php?"._NODE."="._PLUGIN."&f=$forum_name&t=$parent"));
 							
 							break;
 					}
 				} else {
-					Error::Trigger("USERERROR",_t("CANT_DELETE_STARTPOST"));
+					MemErr::Trigger("USERERROR",_t("CANT_DELETE_STARTPOST"));
 				}
 			} else {
-				Error::Trigger("USERERROR",_t("NOT_AUTH_TO_PERF_OP"));
+				MemErr::Trigger("USERERROR",_t("NOT_AUTH_TO_PERF_OP"));
 			}
 		} else {
-			Error::Trigger("USERERROR",_t("POST_DOESNT_EXIST"));
+			MemErr::Trigger("USERERROR",_t("POST_DOESNT_EXIST"));
 		}
 	
 		//Assign captured content to the template engine and clean buffer
@@ -1186,11 +1186,11 @@ class forumsModel extends Views {
 				}
 			} else {
 				//No auth
-				Error::Trigger("USERERROR",_t("NOT_AUTH_TO_PERF_OP"));
+				MemErr::Trigger("USERERROR",_t("NOT_AUTH_TO_PERF_OP"));
 			}
 		} else {
 			//Thread or forum not found
-			Error::Trigger("USERERROR",_t("POST_DOESNT_EXIST"));
+			MemErr::Trigger("USERERROR",_t("POST_DOESNT_EXIST"));
 		}
 	
 		//Assign captured content to the template engine and clean buffer

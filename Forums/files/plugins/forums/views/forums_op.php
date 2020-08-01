@@ -31,6 +31,6 @@
 //Deny direct access
 defined("_LOAD") or die("Access denied");
 
-Error::Trigger("DIALOG",$plugin_op['message'],"<div class='options'>".implode(" ",$plugin_op['options'])."</div>");
+MemErr::Trigger("DIALOG",$plugin_op['message'],"<div class='options'>".implode(" ",$plugin_op['options'])."</div>");
 
 ?>

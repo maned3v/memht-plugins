@@ -45,7 +45,7 @@ class Setup {
                       `title` varchar(255) NOT NULL,
                       `name` varchar(255) NOT NULL,
                       `author` int(10) NOT NULL,
-                      `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                      `created` datetime NOT NULL,
                       `file` varchar(255) NOT NULL,
                       `thumb` varchar(255) NOT NULL,
                       `description` text NOT NULL,

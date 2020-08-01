@@ -428,7 +428,7 @@ class galleryModel {
 						<div class="ui-widget-header"><?php echo _t("BROWSE_X",MB::strtolower(_t("CATEGORY"))); ?></div>
 						<div class="body">
 						<?php
-						Error::Trigger("USERERROR",_t("X_NOT_FOUND",_t("CATEGORY")));
+						MemErr::Trigger("USERERROR",_t("X_NOT_FOUND",_t("CATEGORY")));
 						?>
 						</div>
 					</div>
@@ -696,10 +696,10 @@ class galleryModel {
 
 									Utils::Redirect("admin.php?cont="._PLUGIN);
 								} else {
-									Error::Trigger("USERERROR",implode("<br />",$errors));
+									MemErr::Trigger("USERERROR",implode("<br />",$errors));
 								}
 							} else {
-								Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+								MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 							}
                         ?>
                             </div>
@@ -995,14 +995,14 @@ class galleryModel {
 									
 										Utils::Redirect("admin.php?cont="._PLUGIN);
 									} else {
-										Error::Trigger("USERERROR",implode("<br />",$errors));
+										MemErr::Trigger("USERERROR",implode("<br />",$errors));
 									}
 								} else {
-									Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+									MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 								}
 							}
 						} else {
-							Error::Trigger("USERERROR",_t("X_NOT_FOUND",_t("IMAGE")));
+							MemErr::Trigger("USERERROR",_t("X_NOT_FOUND",_t("IMAGE")));
 						}
 						?>
 
@@ -1519,10 +1519,10 @@ class galleryModel {
 
 									Utils::Redirect("admin.php?cont="._PLUGIN."&op=sections");
 								} else {
-									Error::Trigger("USERERROR",implode("<br />",$errors));
+									MemErr::Trigger("USERERROR",implode("<br />",$errors));
 								}
 							} else {
-								Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+								MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 							}
 
 							?>
@@ -1694,14 +1694,14 @@ class galleryModel {
 
 										Utils::Redirect("admin.php?cont="._PLUGIN."&op=sections");
 									} else {
-										Error::Trigger("USERERROR",implode("<br />",$errors));
+										MemErr::Trigger("USERERROR",implode("<br />",$errors));
 									}
 								} else {
-									Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+									MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 								}
 							}
 						} else {
-							Error::Trigger("USERERROR",_t("X_NOT_FOUND",_t("SECTION")));
+							MemErr::Trigger("USERERROR",_t("X_NOT_FOUND",_t("SECTION")));
 						}
 						?>
 
@@ -2136,10 +2136,10 @@ class galleryModel {
 
 									Utils::Redirect("admin.php?cont="._PLUGIN."&op=categories");
 								} else {
-									Error::Trigger("USERERROR",implode("<br />",$errors));
+									MemErr::Trigger("USERERROR",implode("<br />",$errors));
 								}
 							} else {
-								Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+								MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 							}
 
 							?>
@@ -2370,14 +2370,14 @@ class galleryModel {
 
 										Utils::Redirect("admin.php?cont="._PLUGIN."&op=categories");
 									} else {
-										Error::Trigger("USERERROR",implode("<br />",$errors));
+										MemErr::Trigger("USERERROR",implode("<br />",$errors));
 									}
 								} else {
-									Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+									MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 								}
 							}
 						} else {
-							Error::Trigger("USERERROR",_t("X_NOT_FOUND",_t("CATEGORY")));
+							MemErr::Trigger("USERERROR",_t("X_NOT_FOUND",_t("CATEGORY")));
 						}
 						?>
 

@@ -339,7 +339,7 @@ class filesmanagerModel {
 						<div class="ui-widget-header"><?php echo _t("BROWSE_X",MB::strtolower(_t("CATEGORY"))); ?></div>
 						<div class="body">
 						<?php
-						Error::Trigger("USERERROR",_t("X_NOT_FOUND",_t("CATEGORY")));
+						MemErr::Trigger("USERERROR",_t("X_NOT_FOUND",_t("CATEGORY")));
 						?>
 						</div>
 					</div>
@@ -489,13 +489,13 @@ class filesmanagerModel {
 									$Db->Query("INSERT INTO #__filemgr (category,title,file_name,file_ext,size,author,uploaded,ip,roles)
 												VALUES ('".intval($category)."','".$Db->_e($title)."','".$Db->_e($name)."','".$Db->_e($ext)."','".$Db->_e($size)."','".intval($User->Uid())."',NOW(),'".$Db->_e(Utils::Ip2num($User->Ip()))."','".$Db->_e($roles)."')");
 
-									Error::Trigger("INFO",_t("UPLOADED"));
+									MemErr::Trigger("INFO",_t("UPLOADED"));
 									Utils::Redirect("admin.php?cont="._PLUGIN,4000);
 								} else {
-									Error::Trigger("USERERROR",implode("<br />",$errors));
+									MemErr::Trigger("USERERROR",implode("<br />",$errors));
 								}
 							} else {
-								Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+								MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 							}
                         ?>
                             </div>
@@ -697,7 +697,7 @@ class filesmanagerModel {
 									<div class="ui-widget-header"><?php echo _t("EDIT"); ?></div>
 									<div class="body">
 									<?php
-									Error::Trigger("USERERROR",implode("<br />",$errors));
+									MemErr::Trigger("USERERROR",implode("<br />",$errors));
 									?>
 									</div>
 								</div>
@@ -715,7 +715,7 @@ class filesmanagerModel {
 								<div class="ui-widget-header"><?php echo _t("EDIT"); ?></div>
 								<div class="body">
 								<?php
-								Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+								MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 								?>
 								</div>
 							</div>
@@ -734,7 +734,7 @@ class filesmanagerModel {
 						<div class="ui-widget-header"><?php echo _t("EDIT"); ?></div>
 						<div class="body">
 						<?php
-						Error::Trigger("USERERROR",_t("X_NOT_FOUND",_t("FILE")));
+						MemErr::Trigger("USERERROR",_t("X_NOT_FOUND",_t("FILE")));
 						?>
 						</div>
 					</div>
@@ -1041,10 +1041,10 @@ class filesmanagerModel {
 
 									Utils::Redirect("admin.php?cont="._PLUGIN."&op=categories");
 								} else {
-									Error::Trigger("USERERROR",implode("<br />",$errors));
+									MemErr::Trigger("USERERROR",implode("<br />",$errors));
 								}
 							} else {
-								Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+								MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 							}
 
 							?>
@@ -1175,14 +1175,14 @@ class filesmanagerModel {
 
 										Utils::Redirect("admin.php?cont="._PLUGIN."&op=categories");
 									} else {
-										Error::Trigger("USERERROR",implode("<br />",$errors));
+										MemErr::Trigger("USERERROR",implode("<br />",$errors));
 									}
 								} else {
-									Error::Trigger("USERERROR",_t("INVALID_TOKEN"));
+									MemErr::Trigger("USERERROR",_t("INVALID_TOKEN"));
 								}
 							}
 						} else {
-							Error::Trigger("USERERROR",_t("X_NOT_FOUND",_t("CATEGORY")));
+							MemErr::Trigger("USERERROR",_t("X_NOT_FOUND",_t("CATEGORY")));
 						}
 						?>
 

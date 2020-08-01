@@ -45,7 +45,7 @@ class Setup {
                       `title` varchar(255) NOT NULL,
                       `name` varchar(255) NOT NULL,
                       `author` int(10) NOT NULL,
-                      `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                      `created` datetime NOT NULL,
                       `file` varchar(255) NOT NULL,
                       `ext` char(4) NOT NULL,
                       `external` tinyint(1) NOT NULL DEFAULT '0',
@@ -116,9 +116,9 @@ class Setup {
         // downloads comments
         $Db->Query("DELETE FROM `#__comments` WHERE `controller`='downloads'");
         // downloads rate
-		$Db->Query("DELETE FROM `#__ratings` WHERE `controller`='downloads'");
-		//ACP Menu link
-		$Db->Query("DELETE FROM `#__menu_acp` WHERE `uniqueid`='downloads_main'");
+        $Db->Query("DELETE FROM `#__ratings` WHERE `controller`='downloads'");
+        //ACP Menu link
+        $Db->Query("DELETE FROM `#__menu_acp` WHERE `uniqueid`='downloads_main'");
                 
 		return _t("UNINSTALLED");
 	}

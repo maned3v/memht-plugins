@@ -80,7 +80,7 @@ class filesmanagerModel extends Views {
 			//Start buffering content
 			Utils::StartBuffering();
 
-			Error::Trigger("USERERROR",$message);
+			MemErr::Trigger("USERERROR",$message);
 
 			//Assign captured content to the template engine and clean buffer
 			Template::AssignVar("sys_main",array("title"=>_PLUGIN_TITLE,
