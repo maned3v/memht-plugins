@@ -15,10 +15,3 @@ You can create and manage your website with MemHT in few and easy steps, it's cu
 |MemHT Extensions|https://github.com/maned3v/memht-extensions|
 |**MemHT Plugins**|https://github.com/maned3v/memht-plugins|
 |MemHT Templates|https://github.com/maned3v/memht-templates|
-
-#### MemHT links
-<table>
-  <tr>
-    <td>Documents</td><td>http://docs.memht.com</td>
-  </tr>
-</table>
